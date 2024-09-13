@@ -1,13 +1,12 @@
 // Nav.js
-import logo from '../img/logo.png';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import logo from "../img/logo.png";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
-
   const changeLocation = (_url) => {
     window.location.replace(_url);
-  }
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center p-2">
@@ -18,36 +17,43 @@ const Nav = () => {
           </Link>
         </div>
       </div>
+
       <div className="col">
         <div className="nav-group rounded me-2">
           <button type="button" className="btn text-center pe-2 me-2">
-            Hogar
+            Home
           </button>
-          <Link to="/Personas">
+          <Link to="/Contact">
             <button type="button" className="btn text-center pe-2 me-2">
-              Contactanos
+              Contact us
             </button>
           </Link>
 
           <button type="button" className="btn text-center pe-2 me-2">
-            Sobre Nosotros
+            About us
           </button>
           <button type="button" className="btn p-2 text-center m-1 me-2">
-            Servicios
+            Services
           </button>
         </div>
       </div>
       <div className="col">
         <div className="ms-2 nav-group rounded">
-          <button type="button" className="btn btn-primary text-light text-center pe-2 me-2">
+          <button
+            type="button"
+            className="btn btn-primary text-light text-center pe-2 me-2"
+          >
             Client Login
           </button>
-          <button type="button" className="btn btn-primary text-light p-2 text-center m-1 me-2">
+          <button
+            type="button"
+            className="btn btn-primary text-light p-2 text-center m-1 me-2"
+          >
             Agent Login
           </button>
         </div>
       </div>
-    </nav >
+    </nav>
   );
 };
 
