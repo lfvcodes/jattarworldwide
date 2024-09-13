@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# JattarWorldwide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **JattarWorldwide** repository. This project is the frontend implementation in **React** of an elegant design created in **Figma** by designer **Carolina Pineda**. This repository contains all the necessary components and styles to build an attractive and functional user interface.
 
-## Available Scripts
+Bienvenido al repositorio **JattarWorldwide**. Este proyecto es la implementación frontend en **React** de un elegante diseño creado en **Figma** por la diseñadora **Carolina Pineda**. Este repositorio contiene todos los componentes y estilos necesarios para construir una interfaz de usuario atractiva y funcional.
 
-In the project directory, you can run:
+## Features / Características
 
-### `npm start`
+- **Responsive Layout:** Adaptable to different screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Reusable Components:** Based on a modular architecture with React components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Modern Design:** Visually appealing interface following the design guidelines of Carolina Pineda.
 
-### `npm test`
+- **Maquetación Responsiva:** Adaptable a diferentes tamaños de pantalla.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Componentes Reutilizables:** Basado en una arquitectura modular con componentes de React.
 
-### `npm run build`
+- **Diseño Moderno:** Interfaz visualmente atractiva según los lineamientos de diseño de Carolina Pineda.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used / Tecnologías Usadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React.js**: The main library for building the interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Figma**: The tool used for visual design.
 
-### `npm run eject`
+- **React Router**: For handling navigation between pages.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React.js**: Librería principal para la construcción de la interfaz.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Figma**: Herramienta utilizada para el diseño visual.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React Router**: Para el manejo de la navegación entre páginas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Credits / Créditos
 
-## Learn More
+- [Luis Vasquez](https://www.linkedin.com/in/luis-fernando-vasquez-269911273) - Full Stack Developer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Carolina Pineda](https://www.linkedin.com/in/caarolina-blog) - UI/UX Designer
