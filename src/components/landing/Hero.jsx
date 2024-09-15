@@ -3,6 +3,7 @@ import hero2 from "../../img/hero2.png";
 import usersReg from "../../img/users.png";
 import soundWave from "../../img/Waves.png";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -16,15 +17,19 @@ export const Hero = () => {
           <h3 className="text-dark">Call now and see for yourself!</h3>
           <br />
           <div className="d-flex">
-            <button type="button" className="btn btn-lg btn-primary m-2">
-              Client Login
-            </button>
-            <button
-              type="button"
-              className="btn btn-lg btn-outline-primary m-2"
-            >
-              Agent Login
-            </button>
+            <Link to="/Login" state={{ role: "client" }}>
+              <button type="button" className="btn btn-lg btn-primary m-2">
+                Client Login
+              </button>
+            </Link>
+            <Link to="/AgentLogin" state={{ role: "agent" }}>
+              <button
+                type="button"
+                className="btn btn-lg btn-outline-primary m-2"
+              >
+                Agent Login
+              </button>
+            </Link>
           </div>
           <br />
           <div className="d-flex">

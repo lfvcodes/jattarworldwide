@@ -9,48 +9,55 @@ const Nav = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-center p-2">
-      <div className="col text-center">
-        <div className="navbar-brand m-2">
-          <Link to="/Inicio">
-            <img src={logo} width={200} height={33} alt="Logo" />
-          </Link>
-        </div>
-      </div>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <Link to="/Inicio" className="navbar-brand">
+          <img src={logo} width={200} height={33} alt="Logo" />
+        </Link>
 
-      <div className="col">
-        <div className="nav-group rounded me-2">
-          <button type="button" className="btn text-center pe-2 me-2">
-            Home
-          </button>
-          <Link to="/Contact">
-            <button type="button" className="btn text-center pe-2 me-2">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="navbar-nav ms-auto me-auto">
+            <Link to="/Inicio" className="nav-link">
+              Home
+            </Link>
+            <Link to="/Contact" className="nav-link">
               Contact us
-            </button>
-          </Link>
-
-          <button type="button" className="btn text-center pe-2 me-2">
-            About us
-          </button>
-          <button type="button" className="btn p-2 text-center m-1 me-2">
-            Services
-          </button>
-        </div>
-      </div>
-      <div className="col">
-        <div className="ms-2 nav-group rounded">
-          <button
-            type="button"
-            className="btn btn-primary text-light text-center pe-2 me-2"
-          >
-            Client Login
-          </button>
-          <button
-            type="button"
-            className="btn btn-primary text-light p-2 text-center m-1 me-2"
-          >
-            Agent Login
-          </button>
+            </Link>
+            <Link to="/About" className="nav-link">
+              About us
+            </Link>
+            <Link to="/Services" className="nav-link">
+              Services
+            </Link>
+          </div>
+          <div className="navbar-nav">
+            <Link to="/Login" state={{ role: "client" }} className="nav-link">
+              <button className="btn btn-primary text-light">
+                Client Login
+              </button>
+            </Link>
+            <Link
+              to="/AgentLogin"
+              state={{ role: "agent" }}
+              className="nav-link"
+            >
+              <button className="btn btn-primary text-light">
+                Agent Login
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
