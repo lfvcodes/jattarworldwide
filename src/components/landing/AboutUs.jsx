@@ -3,7 +3,7 @@ import fillContent from "../../img/formFillContent.png";
 import BlueWave2 from "../../img/bluewave2.png";
 export const AboutUs = () => {
   return (
-    <div className="container mt-4">
+    <div id="about" className="container mt-4">
       <div className="row">
         <div className="col text-center">
           <img src={fillContent} height={232} />

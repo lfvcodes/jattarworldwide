@@ -4,10 +4,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
-  const changeLocation = (_url) => {
-    window.location.replace(_url);
-  };
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -35,10 +31,10 @@ const Nav = () => {
             <Link to="/Contact" className="nav-link">
               Contact us
             </Link>
-            <Link to="/About" className="nav-link">
+            <a href="/Inicio#about" className="nav-link">
               About us
-            </Link>
-            <Link to="/Services" className="nav-link">
+            </a>
+            <Link to="/Inicio#services" className="nav-link">
               Services
             </Link>
           </div>

@@ -4,7 +4,7 @@ import Call from "../../img/PhoneCall.png";
 import LinkIcon from "../../img/LinkSimple.png";
 export const Ourservice = () => {
   return (
-    <div className="container mt-4">
+    <div id="services" className="container mt-4">
       <div className="row text-center">
         <div className="offset-4 col-4">
           <h2>Nuestro Servicios</h2>

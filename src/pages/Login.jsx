@@ -23,7 +23,7 @@ export const Login = () => {
                 gráfico en demostraciones de tipografías o de borradores de
                 diseño para
               </p>
-              <form className="m-5 p-5 pt-0" action="#">
+              <form className="m-5 p-5 pt-0" action="/dashboard/">
                 {role === "client" && (
                   <div className="mb-3">
                     <label for="" className="form-label">
@@ -37,16 +37,16 @@ export const Login = () => {
                   <label for="" className="form-label">
                     Mail
                   </label>
-                  <input type="email" className="form-control" />
+                  <input required type="email" className="form-control" />
                 </div>
                 <div className="mb-3">
                   <label for="" className="form-label">
                     Password
                   </label>
-                  <input type="password" className="form-control" />
+                  <input required type="password" className="form-control" />
                 </div>
                 <div className="mb-3">
-                  <button type="button" className="btn btn-primary w-100">
+                  <button type="submit" className="btn btn-primary w-100">
                     Enter
                   </button>
                 </div>
