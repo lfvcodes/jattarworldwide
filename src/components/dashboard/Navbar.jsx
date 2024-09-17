@@ -1,5 +1,4 @@
 import React from "react";
-
 import searchDash from "../../img/searchDash.png";
 import iconEnvelope from "../../img/Envelope.png";
 import iconBell from "../../img/Bell.png";
@@ -15,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="row">
       <div className="col">
-        <h2>HI Hello</h2>
+        <h2>Hi Hello</h2>
         <p>
           Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
         </p>
@@ -102,7 +101,7 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item d-flex" href="#">
+                  <a className="dropdown-item d-flex" href="/Login">
                     <img src={iconLogout} />
                     LogOut
                   </a>

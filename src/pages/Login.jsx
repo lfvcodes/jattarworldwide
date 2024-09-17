@@ -23,7 +23,7 @@ export const Login = () => {
                 gráfico en demostraciones de tipografías o de borradores de
                 diseño para
               </p>
-              <form className="m-5 p-5 pt-0" action="/dashboard/">
+              <form className="m-5 p-5 pt-0" action="/Dashboard">
                 {role === "client" && (
                   <div className="mb-3">
                     <label for="" className="form-label">
