@@ -2,59 +2,64 @@ import React from "react";
 import Sidebar from "../components/dashboard/Sidebar";
 import Navbar from "../components/dashboard/Navbar";
 import Phone from "../components/dashboard/Phone";
+import CardCall from "../components/dashboard/IncomingCallCard";
+import iconPhone from "../img/dashPhone.png";
+import iconIcomePhone from "../img/dashPhoneIncoming.png";
+import iconAnsweredPhone from "../img/dashPhoneCall.png";
+import iconSlashPhone from "../img/dashPhoneSlash.png";
+import TableCalls from "../components/dashboard/TableCalls";
 
 export const Dashboard = () => {
+  // Cambiar el color de fondo al montarse el componente
+  document.body.style.backgroundColor = "#F4F6FE"; // Cambia este color por tu preferido
+
   return (
     <div>
       <div className="container-fluid row">
-        <div className="col-2">
+        <div className="col-1">
           <Sidebar />
         </div>
-        <div className="col-10">
+        <div className="col-10 mt-4">
           <Navbar />
         </div>
       </div>
       <div className="container-fluid row">
-        <div className="offset-2 col-6">
+        <div className="offset-1 col-8">
           <div className="row">
-            <div className="card col m-2">
-              <h5 className="card-header">Incoming</h5>
-              <div className="card-body">0</div>
+            <div className="card col m-2 p-2 rounded-8">
+              <img src={iconIcomePhone} width={28} height={28} />
+              <h5>Incoming</h5>
+              <p>Lorem ipsum es el texto</p>
             </div>
-            <div className="card col m-2">
-              <h5 className="card-header">Answered</h5>
-              <div className="card-body">0</div>
+            <div className="card col m-2 p-2 rounded-8">
+              <img src={iconAnsweredPhone} width={28} height={28} />
+              <h5>Answered</h5>
+              <p>Lorem ipsum es el texto</p>
             </div>
-            <div className="card col m-2">
-              <h5 className="card-header">Call Wait</h5>
-              <div className="card-body">0</div>
+            <div className="card col m-2 p-2 rounded-8">
+              <img src={iconPhone} width={28} height={28} />
+              <h5>Call Waiting</h5>
+              <p>Lorem ipsum es el texto</p>
+            </div>
+            <div className="card col m-2 p-2 rounded-8">
+              <img src={iconSlashPhone} width={28} height={28} />
+              <h5>Abandoned Calls</h5>
+              <p>Lorem ipsum es el texto</p>
             </div>
           </div>
-          <div class="table-responsive">
-            <table class="table table-primary">
-              <thead>
-                <tr>
-                  <th scope="col">Column 1</th>
-                  <th scope="col">Column 2</th>
-                  <th scope="col">Column 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="">
-                  <td scope="row">R1C1</td>
-                  <td>R1C2</td>
-                  <td>R1C3</td>
-                </tr>
-                <tr class="">
-                  <td scope="row">Item</td>
-                  <td>Item</td>
-                  <td>Item</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="overflow-auto">
+            <div className="d-flex flex-row">
+              <CardCall />
+              <CardCall />
+              <CardCall />
+              <CardCall />
+              <CardCall />
+              <CardCall />
+            </div>
           </div>
+          <TableCalls />
         </div>
-        <div className="col-4 text-center">
+        <div className="col-2 text-center">
           <Phone />
         </div>
       </div>

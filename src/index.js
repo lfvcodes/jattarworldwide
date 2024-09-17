@@ -18,6 +18,7 @@ root.render(
       <Route path='/Login' element={<Login />} />
       <Route path='/AgentLogin' element={<Login />} />
       <Route path='/Dashboard' element={<Dashboard />} />
+      <Route path='/dashboard' element={<Dashboard />} />
       <Route path="*" element={<NoPage />} />
     </Routes>
   </BrowserRouter>
