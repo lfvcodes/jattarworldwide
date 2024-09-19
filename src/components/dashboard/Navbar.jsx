@@ -9,20 +9,21 @@ import iconGear from "../../img/dashGear.png";
 import iconLogout from "../../img/dashSignOut.png";
 import userAvatar from "../../img/userAvatar.png";
 import iconImage from "../../img/dashWork.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="row">
-      <div className="col">
+      <div className="offset-lg-1 col">
         <h2>Hi Hello</h2>
         <p>
           Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
         </p>
       </div>
 
-      <div className="col">
+      <div className="col-auto">
         <div className="bg-white rounded-pill row p-3">
-          <div className="col bg-light rounded-start-cell rounded-end-cell d-flex">
+          <div className="col-md-4 col-lg-4 bg-light rounded-start-cell rounded-end-cell d-flex">
             <img
               className="m-auto"
               src={searchDash}
@@ -30,24 +31,20 @@ const Navbar = () => {
               height={28}
               alt="Search"
             />
-            <input
-              type="text"
-              placeholder=""
-              className="form-control border-0 bg-light"
-            />
+            <input type="text" className="form-control border-0 bg-light" />
           </div>
-          <div className="col text-end border-end">
-            <button className="btn btn-sm">
+          <div className="col-md-4 col-lg-4 text-center border-end">
+            <button className="btn btn-sm p-1">
               <img src={iconBell} width={26} height={26} alt="Notifications" />
             </button>
-            <button className="btn btn-sm">
+            <button className="btn btn-sm p-1">
               <img src={iconEnvelope} width={26} height={26} alt="Messages" />
             </button>
-            <button className="btn btn-sm">
+            <button className="btn btn-sm p-1">
               <img src={iconTable} width={26} height={26} alt="Tables" />
             </button>
           </div>
-          <div className="col ms-2 bg-light rounded-start-cell rounded-end-cell d-flex">
+          <div className="col-md-4 col-lg-3 ms-2 bg-light rounded-start-cell rounded-end-cell d-flex">
             <div className="btn-group w-100" style={{ position: "relative" }}>
               <button
                 type="button"
@@ -65,8 +62,8 @@ const Navbar = () => {
                 USER
               </button>
               <ul
-                className="dropdown-menu mt-4 border-0 shadow-lg rounded-4"
-                style={{ width: "100%", minWidth: "auto" }}
+                className="dropdown-menu mt-4 border-0 col-xs shadow-lg rounded-4"
+                style={{ width: "100%" }}
               >
                 <li>
                   <div className="card rounded-4 m-2 p-0">
@@ -100,12 +97,14 @@ const Navbar = () => {
                     Settings
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item d-flex" href="/Login">
-                    <img src={iconLogout} />
-                    LogOut
-                  </a>
-                </li>
+                <Link className="text-decoration-none" to="/Login">
+                  <li>
+                    <a className="dropdown-item d-flex" href="/Login">
+                      <img src={iconLogout} />
+                      LogOut
+                    </a>
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>

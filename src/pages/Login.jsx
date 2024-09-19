@@ -9,10 +9,10 @@ export const Login = () => {
   return (
     <div className="container">
       <div className="mt-5 row">
-        <div className="col-2">
+        <div className="col-auto col-lg-2 d-none d-lg-block">
           <img src={Waves} />
         </div>
-        <div className="offset-2 col-8 align-center">
+        <div className="offset-lg-2 col-lg-8 col-md-10 align-center">
           <div className="mt-5 border-0 card">
             <div className="card-header bg-white border-0 text-center">
               <img src={Logo} width={200} height={84} />
@@ -23,7 +23,7 @@ export const Login = () => {
                 gráfico en demostraciones de tipografías o de borradores de
                 diseño para
               </p>
-              <form className="m-5 p-5 pt-0" action="/Dashboard">
+              <form className="m-lg-5 p-lg-5 pt-0" action="/Dashboard">
                 {role === "client" && (
                   <div className="mb-3">
                     <label for="" className="form-label">

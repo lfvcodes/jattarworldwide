@@ -62,19 +62,19 @@ export const TableCalls = () => {
   return (
     <div>
       <div className="row">
-        <div className="card card col m-2 p-2 rounded-8">
+        <div className="card card col-auto col-lg m-2 p-2 rounded-8">
           <div className="d-flex">
             <img src={iconSearch} width={26} height={26} />
             <span>Search</span>
           </div>
         </div>
-        <div className="card card col m-2 p-2 rounded-8">
+        <div className="card card col-auto col-lg m-2 p-2 rounded-8">
           <div className="d-flex">
             <img src={iconFilter} width={26} height={26} />
             <span>Filter</span>
           </div>
         </div>
-        <div className="card card col m-2 p-2 rounded-8">
+        <div className="card card col-auto col-lg m-2 p-2 rounded-8">
           <div className="d-flex">
             <img src={iconClock} width={26} height={26} />
             <span>Min / Fecha</span>
