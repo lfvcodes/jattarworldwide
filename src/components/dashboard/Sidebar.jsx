@@ -53,7 +53,9 @@ const Sidebar = () => {
         </div>
 
         <div className="sidebar-item">
-          <img src={phone} alt="Phone" />
+          <NavLink to="/Calls" activeClassName="active">
+            <img src={phone} alt="Phone" />
+          </NavLink>
         </div>
 
         <div className="sidebar-item mb-5">

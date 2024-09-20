@@ -46,6 +46,58 @@ const CallsRow = () => {
   );
 };
 
+export const CallCounter = () => {
+  return (
+    <div className="row mt-4 mb-4">
+      <div className="col-auto">
+        <div className="card rounded-8 p-2">
+          <div className="row">
+            <div className="col-2 m-auto">
+              <img src={idBadge} />
+            </div>
+            <div className="col-10">
+              <h5 className="text-secondary">Customer Service</h5>
+              <span>The last 7 days</span>
+              <h5 className="text-secondary">376 Total</h5>
+              <span>Lorem Ipsum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="col-auto">
+        <div className="card rounded-8 p-2">
+          <div className="row">
+            <div className="col-2 m-auto">
+              <img src={iconInfo} />
+            </div>
+            <div className="col-10">
+              <h5 className="text-secondary">Technical Support</h5>
+              <span>The last 7 days</span>
+              <h5 className="text-secondary">411 Total</h5>
+              <span>Lorem Ipsum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="col-auto">
+        <div className="card rounded-8 p-2">
+          <div className="row">
+            <div className="col-2 m-auto">
+              <img src={shopping} />
+            </div>
+            <div className="col-10">
+              <h5 className="text-secondary">Additional Products</h5>
+              <span>The last 7 days</span>
+              <h5 className="text-secondary">377 Total</h5>
+              <span>Lorem Ipsum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Calls = () => {
   const state = useLocation().state || {};
   document.body.style.backgroundColor = "#F4F6FE";
@@ -63,53 +115,7 @@ const Calls = () => {
           />
           <div className="container-fluid row">
             <div className="offset-1 col-lg-11">
-              <div className="row mt-4 mb-4">
-                <div className="col-auto">
-                  <div className="card rounded-8 p-2">
-                    <div className="row">
-                      <div className="col-2 m-auto">
-                        <img src={idBadge} />
-                      </div>
-                      <div className="col-10">
-                        <h5 className="text-secondary">Customer Service</h5>
-                        <span>The last 7 days</span>
-                        <h5 className="text-secondary">376 Total</h5>
-                        <span>Lorem Ipsum</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-auto">
-                  <div className="card rounded-8 p-2">
-                    <div className="row">
-                      <div className="col-2 m-auto">
-                        <img src={iconInfo} />
-                      </div>
-                      <div className="col-10">
-                        <h5 className="text-secondary">Technical Support</h5>
-                        <span>The last 7 days</span>
-                        <h5 className="text-secondary">411 Total</h5>
-                        <span>Lorem Ipsum</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-auto">
-                  <div className="card rounded-8 p-2">
-                    <div className="row">
-                      <div className="col-2 m-auto">
-                        <img src={shopping} />
-                      </div>
-                      <div className="col-10">
-                        <h5 className="text-secondary">Additional Products</h5>
-                        <span>The last 7 days</span>
-                        <h5 className="text-secondary">377 Total</h5>
-                        <span>Lorem Ipsum</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CallCounter />
               <div className="row">
                 <div className="col-sm-12 col-md-8 col-lg-9">
                   <table className="table table-borderless text-center">

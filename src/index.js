@@ -7,6 +7,7 @@ import NoPage from './pages/NoPage';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Agents from './components/dashboard/Agents';
+import CallSection from './components/dashboard/CallSection';
 import Calls from './components/dashboard/Calls';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,7 +23,11 @@ root.render(
       <Route path='/Dashboard' element={<Dashboard />} />
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/Agents' element={<Agents />} />
-      <Route path='/Calls' element={<Calls />} />
+      <Route path='/Calls/Income' element={<Calls />} />
+      <Route path='/Calls' element={<CallSection />} />
+      <Route path='/Calls/Aswered' element={<Calls />} />
+      <Route path='/Calls/Waiting' element={<Calls />} />
+      <Route path='/Calls/Abandoned' element={<Calls />} />
       <Route path="*" element={<NoPage />} />
     </Routes>
   </BrowserRouter>

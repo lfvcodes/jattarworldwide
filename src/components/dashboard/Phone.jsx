@@ -3,11 +3,12 @@ import imgPhoneContact from "../../img/phonePeople.png";
 import imgPhoneMute from "../../img/phoneMute.png";
 import imgPhoneOptions from "../../img/phoneOptions.png";
 import imgPhonePause from "../../img/phonePause.png";
+import imgCloseCall from "../../img/rejectCall.png";
 import imgMakeCall from "../../img/phoneMakeCall.png";
 import iconBackspace from "../../img/iconBackspace.png";
 import timeIndicator from "../../img/timeIndicator.png";
 
-const Phone = () => {
+const Phone = ({ minify }) => {
   const [numero, setNumero] = useState("");
 
   const agregarNumero = (num) => {
@@ -17,6 +18,54 @@ const Phone = () => {
   const eliminarUltimo = () => {
     setNumero((prev) => prev.slice(0, -1));
   };
+
+  const imgCall = minify == "true" ? imgCloseCall : imgMakeCall;
+
+  const keynumber =
+    minify == "true" ? (
+      ""
+    ) : (
+      <>
+        <div className="container row p-2 text-center">
+          <div className="col text-center">
+            <h5 className="ms-2">{numero}</h5>
+          </div>
+          <div className="col text-end">
+            {numero && ( // Solo muestra el botón si hay números
+              <button onClick={eliminarUltimo} className="btn ms-3 p-0">
+                <img
+                  width={32}
+                  height={32}
+                  className="img-fluid"
+                  src={iconBackspace}
+                />
+              </button>
+            )}
+          </div>
+        </div>
+      </>
+    );
+
+  const keypad =
+    minify == "true" ? (
+      ""
+    ) : (
+      <div className="border rounded-4 row mx-auto p-1 mb-3">
+        {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "#"].map(
+          (num, index) => (
+            <div className="col-4" key={index}>
+              <div
+                className="btn-outline-info text-dark card mb-2 p-1 pb-0"
+                onClick={() => agregarNumero(num)}
+                style={{ cursor: "pointer" }}
+              >
+                <h4>{num}</h4>
+              </div>
+            </div>
+          )
+        )}
+      </div>
+    );
 
   return (
     <div>
@@ -58,44 +107,11 @@ const Phone = () => {
             </button>
           </div>
         </div>
-        <div className="container row p-2 text-center">
-          <div className="col text-center">
-            <h5 className="ms-2">{numero}</h5>
-          </div>
-          <div className="col text-end">
-            {numero && ( // Solo muestra el botón si hay números
-              <button onClick={eliminarUltimo} className="btn ms-3 p-0">
-                <img
-                  width={32}
-                  height={32}
-                  className="img-fluid"
-                  src={iconBackspace}
-                />
-              </button>
-            )}
-          </div>
-        </div>
-        <div className="border rounded-4 row mx-auto p-1 mb-3">
-          {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "#"].map(
-            (
-              num,
-              index // Corregido el uso de la sintaxis
-            ) => (
-              <div className="col-4" key={index}>
-                <div
-                  className="btn-outline-info text-dark card mb-2 p-1 pb-0"
-                  onClick={() => agregarNumero(num)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <h4>{num}</h4>
-                </div>
-              </div>
-            )
-          )}
-        </div>
+        {keynumber}
+        {keypad}
         <div className="text-center">
           <button className="btn">
-            <img src={imgMakeCall} width={42} height={42} />
+            <img src={imgCall} width={42} height={42} />
           </button>
         </div>
       </div>
