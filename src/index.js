@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import NoPage from './pages/NoPage';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Agents from './components/dashboard/Agents';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
       <Route path='/AgentLogin' element={<Login />} />
       <Route path='/Dashboard' element={<Dashboard />} />
       <Route path='/dashboard' element={<Dashboard />} />
+      <Route path='/Agents' element={<Agents />} />
       <Route path="*" element={<NoPage />} />
     </Routes>
   </BrowserRouter>

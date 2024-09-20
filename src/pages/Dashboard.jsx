@@ -19,7 +19,7 @@ export const Dashboard = () => {
           <Sidebar />
         </div>
         <div className="col-auto mt-lg-4">
-          <Navbar />
+          <Navbar title="Hello" text="Welcome to JattarWorldwide CallCenter" />
           <div className="container-fluid row">
             <div className="offset-1 col-lg-11">
               <div className="row">

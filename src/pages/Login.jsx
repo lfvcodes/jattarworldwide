@@ -15,7 +15,9 @@ export const Login = () => {
         <div className="offset-lg-2 col-lg-8 col-md-10 align-center">
           <div className="mt-5 border-0 card">
             <div className="card-header bg-white border-0 text-center">
-              <img src={Logo} width={200} height={84} />
+              <Link to="/Inicio">
+                <img src={Logo} width={200} height={84} />
+              </Link>
             </div>
             <div className="card-body">
               <p className="text-center">

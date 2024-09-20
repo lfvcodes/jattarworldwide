@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 import brand from "../../img/logo_brand.png";
 import microphone from "../../img/Microphone.png";
 import gear from "../../img/Gear.png";
@@ -33,23 +34,32 @@ const Sidebar = () => {
           !isOpen && window.innerWidth < 992 ? "closed" : "open"
         }`}
       >
-        <Link to="/Dashboard">
+        <NavLink to="/Dashboard" activeClassName="active">
           <div className="sidebar-item">
             <img src={brand} alt="Brand Logo" />
           </div>
-        </Link>
+        </NavLink>
+
         <div className="sidebar-item mt-5 mb-4">
-          <img src={appWindow} alt="App Window" />
+          <NavLink to="/Dashboard" activeClassName="active">
+            <img src={appWindow} alt="App Window" />
+          </NavLink>
         </div>
+
         <div className="sidebar-item">
-          <img src={user} alt="User" />
+          <NavLink to="/Agents" activeClassName="active">
+            <img src={user} alt="User" />
+          </NavLink>
         </div>
+
         <div className="sidebar-item">
           <img src={phone} alt="Phone" />
         </div>
+
         <div className="sidebar-item mb-5">
           <img src={microphone} alt="Microphone" />
         </div>
+
         <div className="sidebar-item mt-5">
           <img src={gear} alt="Gear" />
         </div>

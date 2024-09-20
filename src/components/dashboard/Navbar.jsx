@@ -11,14 +11,12 @@ import userAvatar from "../../img/userAvatar.png";
 import iconImage from "../../img/dashWork.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ title, text }) => {
   return (
     <div className="row">
       <div className="offset-lg-1 col">
-        <h2>Hi Hello</h2>
-        <p>
-          Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-        </p>
+        <h2>{title}</h2>
+        <p>{text}</p>
       </div>
 
       <div className="col-auto">
