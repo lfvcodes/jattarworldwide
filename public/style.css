@@ -24,6 +24,10 @@ body,
   color: var(--primary-color) !important;
 }
 
+.text-secondary{
+  color: #494949 !important;
+}
+
 .btn-primary {
   background-color: var(--primary-color);
 }

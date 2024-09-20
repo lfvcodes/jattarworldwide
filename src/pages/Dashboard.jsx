@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Sidebar from "../components/dashboard/Sidebar";
 import Navbar from "../components/dashboard/Navbar";
 import Phone from "../components/dashboard/Phone";
@@ -26,24 +27,48 @@ export const Dashboard = () => {
                 <div className="col-sm-12 col-md-8 col-lg-9">
                   <div className="row">
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
-                      <img src={iconIcomePhone} width={28} height={28} />
-                      <h5>Incoming</h5>
-                      <p>Lorem ipsum es el texto</p>
+                      <Link
+                        className="text-decoration-none"
+                        to="/Calls"
+                        state={{ type: "Incoming" }}
+                      >
+                        <img src={iconIcomePhone} width={28} height={28} />
+                        <h5>Incoming</h5>
+                        <p>Lorem ipsum es el texto</p>
+                      </Link>
                     </div>
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
-                      <img src={iconAnsweredPhone} width={28} height={28} />
-                      <h5>Answered</h5>
-                      <p>Lorem ipsum es el texto</p>
+                      <Link
+                        className="text-decoration-none"
+                        to="/Calls"
+                        state={{ type: "Answered" }}
+                      >
+                        <img src={iconAnsweredPhone} width={28} height={28} />
+                        <h5>Answered</h5>
+                        <p>Lorem ipsum es el texto</p>
+                      </Link>
                     </div>
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
-                      <img src={iconPhone} width={28} height={28} />
-                      <h5>Call Waiting</h5>
-                      <p>Lorem ipsum es el texto</p>
+                      <Link
+                        className="text-decoration-none"
+                        to="/Calls"
+                        state={{ type: "Waiting" }}
+                      >
+                        <img src={iconPhone} width={28} height={28} />
+                        <h5>Call Waiting</h5>
+                        <p>Lorem ipsum es el texto</p>
+                      </Link>
                     </div>
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
-                      <img src={iconSlashPhone} width={28} height={28} />
-                      <h5>Abandoned Calls</h5>
-                      <p>Lorem ipsum es el texto</p>
+                      <Link
+                        className="text-decoration-none"
+                        to="/Calls"
+                        state={{ type: "Abandoned" }}
+                      >
+                        <img src={iconSlashPhone} width={28} height={28} />
+                        <h5>Abandoned Calls</h5>
+                        <p>Lorem ipsum es el texto</p>
+                      </Link>
                     </div>
                   </div>
                   <div className="overflow-auto">
