@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../img/logo_log.png";
 import Waves from "../img/WavesVertical.png";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Login = () => {
   const location = useLocation();
@@ -60,7 +60,9 @@ export const Login = () => {
                       Forgot your password?
                     </span>
                   )}
-                  <span className="text-primary">Log in again</span>
+                  <Link to="/AgentLogin" state={{ role: "agent" }}>
+                    <span className="text-primary">Log in again</span>
+                  </Link>
                 </div>
               </form>
             </div>

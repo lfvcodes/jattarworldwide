@@ -1,71 +1,97 @@
-import React from "react";
+import { React, useState } from "react";
 import imgPhoneContact from "../../img/phonePeople.png";
 import imgPhoneMute from "../../img/phoneMute.png";
 import imgPhoneOptions from "../../img/phoneOptions.png";
 import imgPhonePause from "../../img/phonePause.png";
 import imgMakeCall from "../../img/phoneMakeCall.png";
+import iconBackspace from "../../img/iconBackspace.png";
+import timeIndicator from "../../img/timeIndicator.png";
 
 const Phone = () => {
+  const [numero, setNumero] = useState("");
+
+  const agregarNumero = (num) => {
+    setNumero((prev) => prev + num);
+  };
+
+  const eliminarUltimo = () => {
+    setNumero((prev) => prev.slice(0, -1));
+  };
+
   return (
     <div>
       <div className="card rounded-4">
-        <div className="m-2 card border-0 rounded-4">
-          <img className="img-fluid" src={imgPhoneContact} />
+        <div className="m-2 card border-0 rounded-4 position-relative">
+          <img
+            className="img-fluid"
+            src={imgPhoneContact}
+            alt="Descripción de la imagen"
+          />
+
+          <div className="caption position-absolute bottom-0 start-0 end-0 text-white p-1">
+            <div className="container row m-0 p-0 ms-2">
+              <div className="col-auto text-start rounded-4 bg-dark bg-opacity-25 me-3">
+                <span className="d-block">Customer</span>
+                <span className="d-block">Camila Paradas</span>
+              </div>
+              <div className="col-auto text-end mt-auto mb-auto bg-dark bg-opacity-25 rounded-8">
+                <span className="d-block">
+                  <img className="me-2" src={timeIndicator} />
+                  0:18
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="row m-2">
           <div className="col">
-            <img src={imgPhoneMute} />
+            <button type="button" className="btn">
+              <img src={imgPhoneMute} />
+            </button>
           </div>
           <div className="col">
             <img src={imgPhoneOptions} />
           </div>
           <div className="col">
-            <img src={imgPhonePause} />
+            <button type="button" className="btn">
+              <img src={imgPhonePause} />
+            </button>
           </div>
         </div>
-        <div className="border rounded-4 row mx-auto p-1">
-          <div className="col-auto">
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>1</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>4</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>7</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>*</h4>
-            </div>
+        <div className="container row p-2 text-center">
+          <div className="col text-center">
+            <h5 className="ms-2">{numero}</h5>
           </div>
-          <div className="col-auto">
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>2</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>5</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>8</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>0</h4>
-            </div>
+          <div className="col text-end">
+            {numero && ( // Solo muestra el botón si hay números
+              <button onClick={eliminarUltimo} className="btn ms-3 p-0">
+                <img
+                  width={32}
+                  height={32}
+                  className="img-fluid"
+                  src={iconBackspace}
+                />
+              </button>
+            )}
           </div>
-          <div className="col-auto">
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>3</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>6</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>9</h4>
-            </div>
-            <div className="btn-outline-info text-dark card mb-2 p-1 pb-0">
-              <h4>#</h4>
-            </div>
-          </div>
+        </div>
+        <div className="border rounded-4 row mx-auto p-1 mb-3">
+          {["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "*", "#"].map(
+            (
+              num,
+              index // Corregido el uso de la sintaxis
+            ) => (
+              <div className="col-4" key={index}>
+                <div
+                  className="btn-outline-info text-dark card mb-2 p-1 pb-0"
+                  onClick={() => agregarNumero(num)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <h4>{num}</h4>
+                </div>
+              </div>
+            )
+          )}
         </div>
         <div className="text-center">
           <button className="btn">

@@ -14,11 +14,15 @@ const IncomingCallCard = () => {
       <div className="border-top row">
         <div className="col">
           <small className="d-block">Min. Wait:</small>
-          <img className="" src={iconReject} alt="Reject Call" />
+          <button className="btn p-0" type="button">
+            <img className="" src={iconReject} alt="Reject Call" />
+          </button>
         </div>
         <div className="col">
           <small className="d-block">0:26</small>
-          <img className="" src={iconAccept} alt="Accept Call" />
+          <button className="btn p-0" type="button">
+            <img className="" src={iconAccept} alt="Accept Call" />
+          </button>
         </div>
       </div>
     </div>
