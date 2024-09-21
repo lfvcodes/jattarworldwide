@@ -7,6 +7,7 @@ import NoPage from './pages/NoPage';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Agents from './components/dashboard/Agents';
+import AgentCall from './components/dashboard/AgentCall';
 import CallSection from './components/dashboard/CallSection';
 import Calls from './components/dashboard/Calls';
 
@@ -23,9 +24,10 @@ root.render(
       <Route path='/Dashboard' element={<Dashboard />} />
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/Agents' element={<Agents />} />
-      <Route path='/Calls/Income' element={<Calls />} />
+      <Route path='/Agents/Calls' element={<AgentCall />} />
       <Route path='/Calls' element={<CallSection />} />
-      <Route path='/Calls/Aswered' element={<Calls />} />
+      <Route path='/Calls/Income' element={<Calls />} />
+      <Route path='/Calls/Answered' element={<Calls />} />
       <Route path='/Calls/Waiting' element={<Calls />} />
       <Route path='/Calls/Abandoned' element={<Calls />} />
       <Route path="*" element={<NoPage />} />

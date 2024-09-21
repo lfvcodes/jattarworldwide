@@ -29,7 +29,7 @@ export const Dashboard = () => {
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
                       <Link
                         className="text-decoration-none"
-                        to="/Calls"
+                        to="/Calls/Income"
                         state={{ type: "Incoming" }}
                       >
                         <img src={iconIcomePhone} width={28} height={28} />
@@ -40,7 +40,7 @@ export const Dashboard = () => {
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
                       <Link
                         className="text-decoration-none"
-                        to="/Calls"
+                        to="/Calls/Answered"
                         state={{ type: "Answered" }}
                       >
                         <img src={iconAnsweredPhone} width={28} height={28} />
@@ -51,7 +51,7 @@ export const Dashboard = () => {
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
                       <Link
                         className="text-decoration-none"
-                        to="/Calls"
+                        to="/Calls/Waiting"
                         state={{ type: "Waiting" }}
                       >
                         <img src={iconPhone} width={28} height={28} />
@@ -62,7 +62,7 @@ export const Dashboard = () => {
                     <div className="card col-sm col-lg m-2 p-2 rounded-8">
                       <Link
                         className="text-decoration-none"
-                        to="/Calls"
+                        to="/Calls/Abandoned"
                         state={{ type: "Abandoned" }}
                       >
                         <img src={iconSlashPhone} width={28} height={28} />

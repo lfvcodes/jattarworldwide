@@ -13,7 +13,7 @@ import {
   generateRandomHour,
 } from "../../utils/randomGenerators";
 
-const TableRow = () => {
+export const TableRow = ({ agent }) => {
   const [randomIcon, setRandomIcon] = useState("");
   const [randomDate, setRandomDate] = useState("");
   const [randomTime, setRandomTime] = useState("");
@@ -35,7 +35,7 @@ const TableRow = () => {
     setRandomHour(generateRandomHour());
   }, []);
 
-  return (
+  return agent != "true" ? (
     <>
       <tr className="spacer border-white" aria-hidden="true">
         <td className="border-0" colSpan="8"></td>
@@ -53,6 +53,20 @@ const TableRow = () => {
         <td className="rounded-end-cell">
           <img src={iconDots} />
         </td>
+      </tr>
+    </>
+  ) : (
+    <>
+      <tr className="spacer border-white" aria-hidden="true">
+        <td className="border-0" colSpan="8"></td>
+      </tr>
+      <tr className="bg-white">
+        <td className="rounded-start-cell">CALL_ID</td>
+        <td>CALL_TYPE</td>
+        <td>AGENT - 006</td>
+        <td>{randomTime}</td>
+        <td>{randomDate}</td>
+        <td className="rounded-end-cell">{randomHour}</td>
       </tr>
     </>
   );

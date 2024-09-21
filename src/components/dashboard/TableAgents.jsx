@@ -5,6 +5,7 @@ import iconAnsweredPhone from "../../img/dashPhoneCall.png";
 import iconSlashPhone from "../../img/dashPhoneSlash.png";
 import iconClock from "../../img/iconClock.png";
 import timeIndicator from "../../img/timeIndicator.png";
+import { Link } from "react-router-dom";
 import avatar1 from "../../img/avatar1.png";
 import avatar2 from "../../img/avatar2.png";
 import avatar3 from "../../img/avatar3.png";
@@ -46,7 +47,9 @@ const TableRow = () => {
           <div className="d-flex">
             <img className="m-2" width={34} height={34} src={randomAvatar} />
             <span className="m-2 d-block">
-              <span>Carolina Pineda</span>
+              <Link className="text-decoration-none" to="/Agents/Calls">
+                <span>Carolina Pineda</span>
+              </Link>
               <span className="d-block">
                 {" "}
                 <img src={timeIndicator} /> online

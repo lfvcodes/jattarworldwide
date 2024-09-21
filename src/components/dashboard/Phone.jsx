@@ -9,14 +9,14 @@ import iconBackspace from "../../img/iconBackspace.png";
 import timeIndicator from "../../img/timeIndicator.png";
 
 const Phone = ({ minify }) => {
-  const [numero, setNumero] = useState("");
+  const [number, setNumber] = useState("");
 
-  const agregarNumero = (num) => {
-    setNumero((prev) => prev + num);
+  const addNumber = (num) => {
+    setNumber((prev) => prev + num);
   };
 
-  const eliminarUltimo = () => {
-    setNumero((prev) => prev.slice(0, -1));
+  const removeLastNumber = () => {
+    setNumber((prev) => prev.slice(0, -1));
   };
 
   const imgCall = minify == "true" ? imgCloseCall : imgMakeCall;
@@ -28,11 +28,11 @@ const Phone = ({ minify }) => {
       <>
         <div className="container row p-2 text-center">
           <div className="col text-center">
-            <h5 className="ms-2">{numero}</h5>
+            <h5 className="ms-2">{number}</h5>
           </div>
           <div className="col text-end">
-            {numero && ( // Solo muestra el botón si hay números
-              <button onClick={eliminarUltimo} className="btn ms-3 p-0">
+            {number && ( // Solo muestra el botón si hay números
+              <button onClick={removeLastNumber} className="btn ms-3 p-0">
                 <img
                   width={32}
                   height={32}
@@ -56,7 +56,7 @@ const Phone = ({ minify }) => {
             <div className="col-4" key={index}>
               <div
                 className="btn-outline-info text-dark card mb-2 p-1 pb-0"
-                onClick={() => agregarNumero(num)}
+                onClick={() => addNumber(num)}
                 style={{ cursor: "pointer" }}
               >
                 <h4>{num}</h4>
@@ -92,16 +92,23 @@ const Phone = ({ minify }) => {
             </div>
           </div>
         </div>
-        <div className="row m-2">
-          <div className="col">
+        <div className="d-flex m-2">
+          <div className="col p-auto">
             <button type="button" className="btn">
               <img src={imgPhoneMute} />
             </button>
           </div>
-          <div className="col">
-            <img src={imgPhoneOptions} />
+          <div className="col p-auto">
+            {minify == "true" ? (
+              <button type="button" className="btn">
+                <img src={imgCall} />
+              </button>
+            ) : (
+              <img src={imgPhoneOptions} />
+            )}
           </div>
-          <div className="col">
+
+          <div className="col p-auto">
             <button type="button" className="btn">
               <img src={imgPhonePause} />
             </button>
@@ -109,7 +116,8 @@ const Phone = ({ minify }) => {
         </div>
         {keynumber}
         {keypad}
-        <div className="text-center">
+
+        <div hidden={minify == "true" ? "hidden" : ""} className="text-center">
           <button className="btn">
             <img src={imgCall} width={42} height={42} />
           </button>
