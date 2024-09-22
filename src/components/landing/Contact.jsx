@@ -9,7 +9,7 @@ export const Contact = () => {
           style={{ background: "#F6F6F6" }}
           className="text-center container rounded-pill p-5"
         >
-          <h2>Contactanos</h2>
+          <h2>Contact us</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Repellendus voluptas veniam accusamus quibusdam, porro animi quas

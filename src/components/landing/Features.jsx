@@ -10,36 +10,40 @@ export const Features = () => {
         <div className="col d-flex">
           <img src={Headset} width={54} height={54} />
           <div className="container">
-            <h5 className="text-primary">TEXTO</h5>
+            <h5 className="text-primary">TEXT</h5>
             <p>
-              Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
+              Lorem ipsum is the text commonly used in graphic design in
+              demonstrations of typography or drafts
             </p>
           </div>
         </div>
         <div className="col d-flex">
           <img src={UserSwitch} width={54} height={54} />
           <div className="container">
-            <h5 className="text-primary">TEXTO</h5>
+            <h5 className="text-primary">TEXT</h5>
             <p>
-              Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
+              Lorem ipsum is the text commonly used in graphic design in
+              demonstrations of typography or drafts
             </p>
           </div>
         </div>
         <div className="col d-flex">
           <img src={UsersFour} width={54} height={54} />
           <div className="container">
-            <h5 className="text-primary">TEXTO</h5>
+            <h5 className="text-primary">TEXT</h5>
             <p>
-              Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
+              Lorem ipsum is the text commonly used in graphic design in
+              demonstrations of typography or drafts
             </p>
           </div>
         </div>
         <div className="col d-flex">
           <img src={Desktop} width={54} height={54} />
           <div className="container">
-            <h5 className="text-primary">TEXTO</h5>
+            <h5 className="text-primary">TEXT</h5>
             <p>
-              Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
+              Lorem ipsum is the text commonly used in graphic design in
+              demonstrations of typography or drafts
             </p>
           </div>
         </div>

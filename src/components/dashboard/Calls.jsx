@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import Phone from "./Phone";
@@ -22,7 +22,9 @@ const CallsRow = () => {
           <div className="d-flex">
             <img className="m-2" width={32} height={32} src={avatar} />
             <span className="m-2 d-block">
-              <span>Carolina Pineda</span>
+              <Link className="text-decoration-none" to="/Agents/Calls">
+                <span>Carolina Pineda</span>
+              </Link>
               <span className="d-block">
                 {" "}
                 <img src={timeIndicator} /> online

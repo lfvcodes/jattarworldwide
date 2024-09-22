@@ -6,12 +6,13 @@ export const Ourservice = () => {
   return (
     <div id="services" className="container mt-4">
       <div className="row text-center">
-        <div className="offset-4 col-4">
-          <h2>Nuestro Servicios</h2>
-          <p>
-            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-            en demostraciones de tipografías o de borradores de diseño para
-            probar el diseño visual antes de insertar el texto final
+        <div className="col">
+          <h2>Our Services</h2>
+          <p className="mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            reiciendis quibusdam quis cum corrupti asperiores odit dolore
+            dolores, doloremque architecto magni ut delectus. Ut culpa pariatur
+            consectetur. Labore, hic enim?
           </p>
         </div>
       </div>
@@ -22,8 +23,8 @@ export const Ourservice = () => {
             <h4 className="ms-2 text-primary">Hanshake</h4>
           </div>
           <p align="justify">
-            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-            en demostraciones de tipografías o de borradores
+            Lorem ipsum is the text commonly used in graphic design in
+            demonstrations of typography or drafts
           </p>
         </div>
         <div className="col bg-light rounded-lg m-4 p-4">
@@ -32,8 +33,8 @@ export const Ourservice = () => {
             <h4 className="ms-2 text-primary">Call</h4>
           </div>
           <p align="justify">
-            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-            en demostraciones de tipografías o de borradores
+            Lorem ipsum is the text commonly used in graphic design in
+            demonstrations of typography or drafts
           </p>
         </div>
         <div className="col bg-light rounded-lg m-4 p-4">
@@ -42,8 +43,8 @@ export const Ourservice = () => {
             <h4 className="ms-2 text-primary">Link</h4>
           </div>
           <p align="justify">
-            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-            en demostraciones de tipografías o de borradores
+            Lorem ipsum is the text commonly used in graphic design in
+            demonstrations of typography or drafts
           </p>
         </div>
       </div>

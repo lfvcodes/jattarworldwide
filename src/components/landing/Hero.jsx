@@ -32,18 +32,20 @@ export const Hero = () => {
             </Link>
           </div>
           <br />
-          <div className="d-flex">
-            <div className="m-2">
+          <div className="row">
+            <div className="col-auto m-2">
               <img src={usersReg} height={60} />
             </div>
-            <div className="m-2 pe-4 border-end border-primary">
-              <h5 class="text-muted">
-                Are<br></br>
-                <b>3,921</b>
-              </h5>
-            </div>
-            <div className="m-2 fw-bold text-primary align-middle">
-              <h4>Registered Users</h4>
+            <div className="col-auto d-flex text-start">
+              <div className="m-2 pe-4 border-end border-primary">
+                <h5 class="text-muted">
+                  Are<br></br>
+                  <b>3,921</b>
+                </h5>
+              </div>
+              <div className="m-2 fw-bold text-primary align-middle">
+                <h4>Registered Users</h4>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import Phone from "./Phone";
@@ -8,13 +9,21 @@ import iconPhone from "../../img/dashPhone.png";
 import iconOnline from "../../img/timeIndicator.png";
 import iconDots from "../../img/Dots.png";
 import iconPlay from "../../img/imgPlay.png";
+import iconPause from "../../img/phonePause.png";
 import iconCaretDown from "../../img/iconCaretDown.png";
 import soundWaveCall from "../../img/SoundWaveCall.png";
-
+import iconClockwiseForward from "../../img/iconClockwiseForward.png";
+import iconClockwise from "../../img/iconClockwise.png";
 import { TableRow } from "./TableCalls";
 
 const AgentCall = () => {
   document.body.style.backgroundColor = "#F4F6FE";
+
+  const [iconSound, setPlay] = useState(iconPlay);
+
+  const controlAudio = () => {
+    setPlay((prevIcon) => (prevIcon === iconPlay ? iconPause : iconPlay));
+  };
 
   const agentProfile = (
     <>
@@ -110,14 +119,60 @@ const AgentCall = () => {
       <div className="card rounded-8">
         <div className="card-header bg-transparent m-auto p-1 row border-0">
           <div className="col d-flex w-100 text-center">
-            <button type="button" className="btn btn-sm p-0">
-              <img src={iconPlay} />
+            <button
+              onClick={() => {
+                controlAudio();
+              }}
+              type="button"
+              className="btn btn-sm p-0"
+            >
+              <img width={32} height={32} src={iconSound} />
             </button>
             <img className="mx-1 me-3 w-75" src={soundWaveCall} />
             <small className="my-auto fs-7">02:05</small>
           </div>
         </div>
-        <div className="card-body p-1"></div>
+        <div className="card-body row p-1">
+          <div className="col w-100">
+            <div class="dropdown">
+              <button
+                class="btn btn-sm btn-outline-primary ms-2 px-4 rounded-8 dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                1x
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <span class="dropdown-item" href="#">
+                    1.5x
+                  </span>
+                </li>
+                <li>
+                  <span class="dropdown-item" href="#">
+                    2x
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col d-flex text-center">
+            <button type="button" className="btn p-0">
+              <small>10s</small>{" "}
+              <img width={16} height={16} src={iconClockwiseForward} />
+            </button>
+
+            <small className="mx-auto my-auto">00:26</small>
+
+            <button type="button" className="btn p-0">
+              <img width={16} height={16} src={iconClockwise} />
+              <small>10s</small>
+            </button>
+          </div>
+          <div className="col"></div>
+        </div>
       </div>
     </>
   );
