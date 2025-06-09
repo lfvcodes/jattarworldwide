@@ -1,3 +1,7 @@
+<a href="https://skillicons.dev">
+     <img src="https://skillicons.dev/icons?i=html,css,react,bootstrap,&perline=15" />
+   </a>
+
 # JattarWorldwide
 
 Welcome to the **JattarWorldwide** repository. This project is the frontend implementation in **React** of an elegant design created in **Figma** by designer **Carolina Pineda**. This repository contains all the necessary components and styles to build an attractive and functional user interface.
